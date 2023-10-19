@@ -11,6 +11,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import {MatTableModule} from '@angular/material/table';
+
+
 
 import {RouterModule, Routes} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,14 +23,17 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
+import { TablaComponent } from './tabla/tabla.component';
 
 //Cuando se agrega una nueva pagina al sitio se agrega aqui
 const appRoutes: Routes=[
   {path:'inicio', component:InicioComponent},
   {path:'nosotros', component:NosotrosComponent},
   {path:'login', component:LoginComponent},
-  {path:'menu', component:MenuComponent}
+  {path:'menu', component:MenuComponent},
+  {path:'tabla', component:TablaComponent}
 ]
+
 
 @NgModule({
   declarations: [
@@ -36,6 +42,7 @@ const appRoutes: Routes=[
     NosotrosComponent,
     LoginComponent,
     MenuComponent,
+    TablaComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes,{enableTracing: true}),
@@ -50,7 +57,8 @@ const appRoutes: Routes=[
     MatTabsModule,
     MatCardModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
 
   ],
   exports: [
