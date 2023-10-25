@@ -5,18 +5,24 @@
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <span>Menú Hamburguesa</span>
+      <span>EDDS: Empresa Desarrolladora De Software</span>
     </mat-toolbar>
 
   </mat-sidenav-content>
 
   <mat-sidenav #sidenav mode="over" mode="over" class="">
       <mat-list role="list" class="lista">
-          <mat-list-item role="listitem">Opcion 1</mat-list-item>
-          <mat-list-item role="listitem">Opcion 2</mat-list-item>
-          <mat-list-item role="listitem">Opcion 3</mat-list-item>
-          <mat-list-item role="listitem">Opcion 4</mat-list-item>
-          <mat-list-item role="listitem">Opcion 5</mat-list-item>
+          <mat-list-item role="listitem">
+            <a href="/inicio">Inicio</a>
+          </mat-list-item>
+
+          <mat-list-item role="listitem">
+            <a href="/nosotros">Nosotros</a>
+          </mat-list-item>
+
+          <mat-list-item role="listitem">
+            <a href="/tabla">Tabla</a>
+          </mat-list-item>
         </mat-list>
   </mat-sidenav>
 

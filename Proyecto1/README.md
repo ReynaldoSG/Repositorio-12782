@@ -37,3 +37,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![Alt text](image-5.png)
 <!-- Tabla -->
 ![Alt text](image-6.png)
+<!-- Menu funcional para cada practica -->
+![Alt text](image-7.png)

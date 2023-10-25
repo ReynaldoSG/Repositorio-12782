@@ -1,11 +1,31 @@
-<p>
-    <mat-toolbar class="colorNavs">
-      <mat-toolbar-row>
-        <span>Práctica de Tabla</span>
-        <span class="example-spacer"></span>
-      </mat-toolbar-row>
+<mat-sidenav-container class="estilos-container">
+  
+  <mat-sidenav-content>
+    <mat-toolbar class="custom-toolbar color-nav">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>EDDS: Empresa Desarrolladora De Software</span>
     </mat-toolbar>
-  </p>
+  </mat-sidenav-content>
+
+  <mat-sidenav #sidenav mode="over" mode="over" class="">
+      <mat-list role="list" class="lista">
+          <mat-list-item role="listitem">
+            <a href="/inicio">Inicio</a>
+          </mat-list-item>
+
+          <mat-list-item role="listitem">
+            <a href="/nosotros">Nosotros</a>
+          </mat-list-item>
+
+          <mat-list-item role="listitem">
+            <a href="/tabla">Tabla</a>
+          </mat-list-item>
+        </mat-list>
+  </mat-sidenav>
+
+</mat-sidenav-container>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
