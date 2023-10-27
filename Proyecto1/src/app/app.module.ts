@@ -12,7 +12,8 @@ import {MatCardModule} from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
-
+//
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 import {RouterModule, Routes} from '@angular/router';
@@ -58,7 +59,8 @@ const appRoutes: Routes=[
     MatCardModule,
     MatSidenavModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
 
   ],
   exports: [
@@ -72,4 +74,5 @@ const appRoutes: Routes=[
   ]
 })
 export class AppModule {
+
 }

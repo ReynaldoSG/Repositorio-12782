@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+
 export interface PeriodicElement {
   matricula: number;
   curp: string;
@@ -26,9 +28,57 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-tabla',
   templateUrl: './tabla.component.html',
-  styleUrls: ['./tabla.component.css']
+  styleUrls: ['./tabla.component.css'],
 })
 export class TablaComponent {
   displayedColumns: string[] = ['matricula', 'curp', 'nombre', 'telefono'];
   dataSource = ELEMENT_DATA;
+
+  openForm() {
+
+    const form = window.open('', '_blank', 'width=300,height=300');
+    
+    if (form) {
+
+      const contenido = `
+        <html>
+        <head>
+          <title>Datos</title>
+        </head>
+        <body style="font-family: Verdana; font-weight: bold;">
+          <h2 >Agregar un Alumno</h2>
+          <form>
+            <div style="display: flex; align-items: center;">
+              <p>Matricula: </p>
+              <input type="text" placeholder="Matricula" style="height: 30px; ">
+            </div>
+            <div style="display: flex; align-items: center;">
+              <p>Curp: </p>
+              <input type="text" placeholder="CURP" style="height: 30px; ">
+            </div>
+            <div style="display: flex; align-items: center;">
+              <p>Nombre: </p>
+              <input type="text" placeholder="Nombre" style="height: 30px; ">
+            </div>
+            <div style="display: flex; align-items: center;">
+              <p>Telefono: </p>
+              <input type="text" placeholder="Numero telefonico" style="height: 30px; ">
+            </div>
+
+                <button type="submit" style="background-color: blue; color: white; font-size: large; ">Enviar</button>
+          </form>
+        </body>
+        </html>
+      `;
+  
+      form.document.open();
+      form.document.write(contenido);
+      form.document.close();
+      
+    } else {
+
+      console.error('No se pudo abrir el formulario.');
+    }
+  }
+
   }
